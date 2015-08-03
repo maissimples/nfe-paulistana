@@ -31,7 +31,7 @@ module NfePaulistana
   private
 
   def get_client(certificado)
-    Savon.client(soap_version: 2, env_namespace: :soap, ssl_verify_mode: :peer, ssl_cert_file: certificado.certificate, ssl_cert_key_file: certificado.key, wsdl: WSDL)
+    Savon.client(soap_version: 1, env_namespace: :soap, ssl_verify_mode: :peer, ssl_cert_file: certificado.certificate, ssl_cert_key_file: certificado.key, wsdl: WSDL)
   end
 
 end
